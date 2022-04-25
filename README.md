@@ -4,7 +4,11 @@ This algorithm is an implementation of the [**Chu-Liu-Edmond**](https://en.wikip
 
 The file ChuLiuEdmond.py contains the algorithm almost exactly as the wikipedia describes it in English, with helper functions being extracted into a utils folder. 
 
-Steps:
+# Assumptions made:
+- The graph is connected.
+- The root node has no incoming node
+
+# Steps:
 - git clone https://github.com/Sutanshu/Chu-Liu-Edmond-s-Algorithm.git ChuLiuEdmondsProject
 - cd ChuLiuEdmondsProject
 - pip install networkx
@@ -12,6 +16,8 @@ Steps:
 - cd src
 
 Commands:
+
+Please note that the position of the "root" flag must be as is.
 
 Custom graph:
 ```
@@ -33,6 +39,23 @@ This will sketch Minimum Spanning Tree of the default graph.
 
 To run a sanity test with a random graph:
 ```python3 adHocSanityTest.py```
+
+Example run:
+```python3 main.py custom_input_graph maximum root="a" < input.txt sketch```
+
+Input graph:
+<img width="1118" alt="Screen Shot 2022-04-25 at 5 52 35 PM" src="https://user-images.githubusercontent.com/42788023/165192689-ad4cd81d-8bb5-4b7e-b69a-0de45aab9b32.png">
+
+MaxST my implementation:
+<img width="1118" alt="Screen Shot 2022-04-25 at 5 53 13 PM" src="https://user-images.githubusercontent.com/42788023/165192739-954775d5-4bd5-423a-bcae-c2f716725b06.png">
+
+MaxST networkx's implementation:
+<img width="1115" alt="Screen Shot 2022-04-25 at 5 52 52 PM" src="https://user-images.githubusercontent.com/42788023/165192707-5431647c-33e7-48f8-83d5-00ca60ae1fa0.png">
+
+
+Note:
+networkx does not comply with my assumptions and works more broadly, and this may cause a few inconsistencies in the output, [**Read here**](https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.tree.branchings.Edmonds.html)
+
 
 Python version: 3.8.9 on a 64-bit machine running on MacOS Monterey v 12.3.1
 
