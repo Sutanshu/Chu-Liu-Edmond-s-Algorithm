@@ -1,0 +1,9 @@
+a b 7
+a c 9
+a d 12
+b e 53
+b f 2
+c d 1
+c f 99
+d b 76
+e c 39
