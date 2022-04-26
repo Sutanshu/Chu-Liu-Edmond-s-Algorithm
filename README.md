@@ -15,7 +15,7 @@ The file ChuLiuEdmond.py contains the algorithm almost exactly as the wikipedia 
 - pip install matplotlib
 - cd src
 
-Commands:
+# Commands:
 
 Please note that the position of the "root" flag must be as is.
 
@@ -40,7 +40,7 @@ This will sketch Minimum Spanning Tree of the default graph.
 To run a sanity test with a random graph:
 ```python3 adHocSanityTest.py```
 
-Example run:
+# Example run:
 ```python3 main.py custom_input_graph maximum root="a" < input.txt sketch```
 
 Input graph:
